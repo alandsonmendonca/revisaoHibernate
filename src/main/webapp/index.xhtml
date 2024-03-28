@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head><title>Cadastro de Garrafas</title></h:head>
+	<h:body>
+		<h:form id="formulario">
+			<p:panelGrid columns="2">
+				<p:outputLabel value="Marca"/>
+				<p:inputText value="#{garrafaBean.garrafa.marca}"/>
+				
+				<p:outputLabel value="Volume"/>
+				<p:inputText value="#{garrafaBean.garrafa.volume}"/>
+				
+				<p:outputLabel value="Cor"/>
+				<p:inputText value="#{garrafaBean.garrafa.cor}"/>
+				
+				<p:commandButton action="#{garrafaBean.salvar()}" value="Salvar" update="formulario"/>
+				<p:link outcome="listagem" value="listar"/>			
+			</p:panelGrid>
+		</h:form>
+	</h:body>
+
+</html>
